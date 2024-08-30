@@ -1,3 +1,5 @@
+export PATH="$PATH:$HOME/bin"
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -13,3 +15,4 @@ compinit
 
 # Custom aliases
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+
