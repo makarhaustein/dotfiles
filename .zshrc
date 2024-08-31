@@ -21,3 +21,5 @@ compinit
 alias sudo='sudo '
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias rmorphans='pacman -Qtdq | sudo pacman -Rns -'
+
+eval $(thefuck --alias)
