@@ -18,10 +18,14 @@ alias sudo='sudo '
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias rmorphans='pacman -Qtdq | sudo pacman -Rns -'
 
+
+ 
+# --- thefuck --- 
 eval $(thefuck --alias)
-# FZF 
+
+# ----- fzf -----
 eval "$(fzf --zsh)"
-#
+# Fd instead of find
 export FZF_DEFAULT_COMMAND="fd --type=f --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
@@ -33,3 +37,16 @@ fzf_compgen_path() {
 fzf_compgen_dir() {
   fd --exclude .git --hidden --type=d . "$1"
 }
+# Preview files
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'tree -C {} | head -200'   "$@" ;;
+    export|unset) fzf --preview "eval 'echo \$'{}"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview 'bat -n --color=always {}' "$@" ;;
+  esac
+}
+
