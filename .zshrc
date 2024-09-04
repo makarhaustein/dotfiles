@@ -1,5 +1,6 @@
 export PATH="$PATH:$HOME/bin"
 
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -19,6 +20,8 @@ zstyle :compinstall filename '/home/makarh/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+# Neovim
+export EDITOR=nvim
 
 # Custom aliases
 alias sudo='sudo '
@@ -62,6 +65,8 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+# fzf git script
+source "$HOME/.zsh/scripts/fzf-git/fzf-git.sh"
 
 # ---- zoxide -----
 eval "$(zoxide init zsh)"
