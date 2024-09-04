@@ -17,6 +17,7 @@ packages=(
     "bat-extras" # configs stuff like man colors (via bat)
     "zoxide" # better cd
     "eza" # better ls
+    "delta"
     # Terminal
     "kitty"
     # Hyprland
