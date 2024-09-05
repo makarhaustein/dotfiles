@@ -1,4 +1,4 @@
-@define-color base #1d1f30;
+@define-color base rgba(37, 45, 63, 0.8);
 @define-color primary #33384f;
 @define-color secondary #494D64;
 @define-color accent #64d3e8;
@@ -27,8 +27,9 @@ window#waybar {
     margin: 8px;
 }
 
-.modules-center label.module {
+.modules-center .module {
     color: @accent;
+    font-size: 18px;
 }
 
 #workspaces button *,

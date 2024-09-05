@@ -1,14 +1,13 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 40, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
+    "position": "top", // Waybar position (top|bottom|left|right)
     "spacing": 4, // Gaps between modules (4px)
     "margin": "4 4 0 4", 
     "reload_style_on_change": true,
-    // Choose the order of the modules
+
     "modules-left": [
+        "custom/arch-icon",
         "hyprland/workspaces"
 //      "custom/media"
     ],
@@ -16,8 +15,8 @@
         "hyprland/window"
     ],
     "modules-right": [
-//        "idle_inhibitor",
         "pulseaudio",
+        "wireplumber",
         "network",
         "cpu",
         "memory",
@@ -32,7 +31,6 @@
         "disable-scroll": true,
         "all-outputs": false,
         "warp-on-scroll": false,
-//        "format": "{name}: {icon}",
         "format": "{icon}",
         "format-icons": {
 //            "1": "",
@@ -42,24 +40,34 @@
 //            "5": "",
             "urgent": "",
             "default": "",
-            "focused": "",
-//            "default": ""
+            "active": "",
         }
     },
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "scroll-step": 0.2,
+        "on-click": "helvum",
+        "format-icons": ["", "", ""]
+    },
     "hyprland/window": {
-        "separate-outputs": true
+    "format": "{}",
+    "rewrite": {
+        "(.*) — Mozilla Firefox": "󰈹   $1",
+        "nvim(.*)": "  $1"
+    },
+    "separate-outputs": true
     },
     "tray": {
         // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% ",
         "tooltip": false
     },
     "memory": {
