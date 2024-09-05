@@ -1,45 +1,82 @@
-* {
-    margin: 1px;
-    font-family: Source Code Pro, JetBrainsMono Nerd Font, FontAwesome, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
+@define-color base #1d1f30;
+@define-color primary #33384f;
+@define-color secondary #494D64;
+@define-color accent #64d3e8;
+@define-color text white;
+
+.class {
+    color: @primary;
+    color: @secondary;
+    color: @accent;
+    color: @base;
+    color: @text;
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0);
+    background: @base;
+    border: 2px solid @secondary;
+    border-radius: 15px;
     color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 8px;
+}
+
+.modules-center .module {
+    color: @accent;
+}
+
+#workspaces button *,
+#workspaces {
+    margin: 0;
+    padding: 0;
+}
+
+#workspaces button.active {
+    color: @accent;
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 10px 0 4px;
     background: transparent;
-    color: white;
+    color: @text;
     border: none;
 }
 
+#workspaces button:hover {
+    background: @primary;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
 
 .module {
+    margin: 0;
     padding: 0 10px;
-    margin-bottom: 2px;
-    background: rgba(43, 48, 59, 0.8);
-    border: 1px solid rgba(100, 114, 125, 0.8);
-    border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background: @primary;
+    border-radius: 10px;
+    border: 2px solid @secondary;
+    transition: background-color 0.2s ease, border 0.2s ease;
 }
 
 label.module:hover {
-    background: rgba(100, 114, 125, 0.4);
+    background: rgba(43, 48, 59, 0.8);
+    border: 2px solid @accent;
 }
 
-
+/*
 #custom-power {
     padding: 0 4px 0 8px;
 }
-
+*/
 
 tooltip {
     background: rgba(43, 48, 59, 0.8);
-    border: 1px solid rgba(100, 114, 125, 0.8);
+    border: 1px solid @secondary;
 }
 
 tooltip label {
