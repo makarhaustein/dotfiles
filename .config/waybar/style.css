@@ -16,7 +16,7 @@
 window#waybar {
     background: @base;
     border: 2px solid @secondary;
-    border-radius: 15px;
+    border-radius: 8px;
     color: @text;
     font-family: Symbols Nerd Font, JetBrainsMono NF;
     font-size: 16px;
@@ -30,7 +30,7 @@ button {
     margin: 6px;
     padding: 0 10px;
     background: @primary;
-    border-radius: 10px;
+    border-radius: 6px;
     border: 2px solid @secondary;
     transition: background-color 0.2s ease, border 0.2s ease;
 }
@@ -60,7 +60,7 @@ tooltip {
 #custom-arch-icon {
     margin: 0;
     padding: 0 10 0 12px;
-    border-radius: 15px 0 0 15px;
+    border-radius: 8px 0 0 8px;
     font-size: 25px;
     color: @accent;
     background-color: @primary;
