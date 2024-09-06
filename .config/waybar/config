@@ -7,7 +7,8 @@
     "reload_style_on_change": true,
 
     "modules-left": [
-        "custom/arch-icon",
+        "group/arch",
+        "custom/youtube",
         "hyprland/workspaces"
 //      "custom/media"
     ],
@@ -18,11 +19,11 @@
         "pulseaudio",
         "wireplumber",
         "network",
-        "cpu",
-        "memory",
+        "group/hardware",
 //        "temperature",
-//        "backlight",
-        "clock"
+        "backlight",
+        "clock",
+        "group/group-power"
 //        "tray",
 //        "custom/power"
     ],
@@ -42,6 +43,43 @@
             "default": "",
             "active": "",
         }
+    },
+	"group/hardware": {
+		"orientation": "inherit",
+		"modules": [
+			"cpu",
+			"memory",
+		]
+	},
+    "custom/arch-icon": {
+        "format": "󰣇",
+        "on-click": "kitty --hold neofetch",
+        "tooltip": false,
+    },
+    "custom/arch-text": {
+        "format": "I use arch btw...",
+        "tooltip": false
+    },
+    "group/arch": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "arch-btw",
+            "transition-left-to-right": true,
+        },
+        "modules": [
+            "custom/arch-icon",
+            "custom/arch-text"
+        ]
+    },
+
+    "custom/youtube": {
+//        "format": "",
+        "format": "",
+        "on-click": "xdg-open https://www.youtube.com/",
+
+        "tooltip": false
+
     },
     "wireplumber": {
         "format": "{volume}% {icon}",
@@ -137,5 +175,40 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+
+    "group/group-power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "custom/power", // First element is the "group leader" and won't ever be hidden
+        "custom/quit",
+        "custom/lock",
+        "custom/reboot",
+        ]
+    },
+    "custom/quit": {
+        "format": "󰗼",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/lock": {
+        "format": "󰍁",
+        "tooltip": false,
+        "on-click": "swaylock"
+    },
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": false,
+        "on-click": "shutdown now"
     }
 }

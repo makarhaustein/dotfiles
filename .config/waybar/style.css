@@ -1,7 +1,7 @@
-@define-color base rgba(37, 45, 63, 0.8);
-@define-color primary #33384f;
+@define-color base rgba(26, 27, 38, 0.6);
+@define-color primary rgba(40, 45, 62, 1);
 @define-color secondary #494D64;
-@define-color accent #64d3e8;
+@define-color accent #7DCFFF;
 @define-color text white;
 
 .class {
@@ -12,41 +12,32 @@
     color: @text;
 }
 
+
 window#waybar {
     background: @base;
     border: 2px solid @secondary;
     border-radius: 15px;
-    color: white;
+    color: @text;
+    font-family: Symbols Nerd Font, JetBrainsMono NF;
     font-size: 16px;
-    font-weight: bold;
 }
 
-.modules-left,
-.modules-center,
-.modules-right {
-    margin: 8px;
+button {
+    border: none;
 }
 
+.module {
+    margin: 6px;
+    padding: 0 10px;
+    background: @primary;
+    border-radius: 10px;
+    border: 2px solid @secondary;
+    transition: background-color 0.2s ease, border 0.2s ease;
+}
+
+#workspaces button.active,
 .modules-center .module {
     color: @accent;
-    font-size: 18px;
-}
-
-#workspaces button *,
-#workspaces {
-    margin: 0;
-    padding: 0;
-}
-
-#workspaces button.active {
-    color: @accent;
-}
-
-#workspaces button {
-    padding: 0 10px 0 4px;
-    background: transparent;
-    color: @text;
-    border: none;
 }
 
 #workspaces button:hover {
@@ -55,31 +46,22 @@ window#waybar {
     text-shadow: inherit;
 }
 
-.module {
-    margin: 0;
-    padding: 0 10px;
-    background: @primary;
-    border-radius: 10px;
-    border: 2px solid @secondary;
-    transition: background-color 0.2s ease, border 0.2s ease;
-}
 
 label.module:hover {
-    background: rgba(43, 48, 59, 0.8);
     border: 2px solid @accent;
 }
 
-/*
-#custom-power {
-    padding: 0 4px 0 8px;
-}
-*/
-
 tooltip {
-    background: rgba(43, 48, 59, 0.8);
-    border: 1px solid @secondary;
+    background: @primary;
+    border: 2px solid @secondary;
 }
 
-tooltip label {
-    color: white;
+
+#custom-arch-icon {
+    margin: 0;
+    padding: 0 10 0 12px;
+    border-radius: 15px 0 0 15px;
+    font-size: 25px;
+    color: @accent;
+    background-color: @primary;
 }
