@@ -3,9 +3,6 @@
 @define-color secondary #494D64;
 @define-color text white;
 @define-color accent rgb(125, 207, 255);
-@define-color green #72D9C9;
-@define-color purple #BA99F6;
-@define-color orange #FE9D64;
 
 .class {
     color: @primary;
@@ -13,9 +10,6 @@
     color: @accent;
     color: @base;
     color: @text;
-    color: @green;
-    color: @purple;
-    color: @orange;
 }
 
 
@@ -50,12 +44,9 @@ button {
 }
 
 #workspaces button.active {
-    color: @purple;
+    color: @accent;
 }
 
-.modules-center .module {
-    color: @purple;
-}
 
 #workspaces button:hover {
     background: @primary;
@@ -73,14 +64,19 @@ tooltip {
     border: 2px solid @secondary;
 }
 
-
 #custom-arch-icon {
-    margin: 0;
+    margin: 0 2px 0 0;
     padding: 0 10px 0 12px;
     border-radius: 8px 0 0 8px;
     font-size: 25px;
     color: @accent;
     background-color: @primary;
+}
+
+
+#hardware .module {
+    background: none;
+    border: none;
 }
 
 #group-power .module {
