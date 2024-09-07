@@ -1,8 +1,11 @@
 @define-color base rgba(26, 27, 38, 0.6);
 @define-color primary rgba(40, 45, 62, 1);
 @define-color secondary #494D64;
-@define-color accent #7DCFFF;
 @define-color text white;
+@define-color accent rgb(125, 207, 255);
+@define-color green #72D9C9;
+@define-color purple #BA99F6;
+@define-color orange #FE9D64;
 
 .class {
     color: @primary;
@@ -10,16 +13,19 @@
     color: @accent;
     color: @base;
     color: @text;
+    color: @green;
+    color: @purple;
+    color: @orange;
 }
 
 
 window#waybar {
-    background: @base;
+    background-color: @base;
     border: 2px solid @secondary;
     border-radius: 8px;
     color: @text;
     font-family: Symbols Nerd Font, JetBrainsMono NF;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 button {
@@ -27,7 +33,7 @@ button {
 }
 
 .module {
-    margin: 6px;
+    margin: 6px 2px;
     padding: 0 10px;
     background: @primary;
     border-radius: 6px;
@@ -35,9 +41,20 @@ button {
     transition: background-color 0.2s ease, border 0.2s ease;
 }
 
-#workspaces button.active,
+#workspaces {
+    padding: 0;
+}
+
+#workspaces button {
+    color: @text;
+}
+
+#workspaces button.active {
+    color: @purple;
+}
+
 .modules-center .module {
-    color: @accent;
+    color: @purple;
 }
 
 #workspaces button:hover {
@@ -59,9 +76,17 @@ tooltip {
 
 #custom-arch-icon {
     margin: 0;
-    padding: 0 10 0 12px;
+    padding: 0 10px 0 12px;
     border-radius: 8px 0 0 8px;
     font-size: 25px;
     color: @accent;
     background-color: @primary;
+}
+
+#group-power .module {
+    padding: 0 10px 0 10px;
+}
+
+#custom-power {
+    margin-right: 6px;
 }
