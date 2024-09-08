@@ -12,7 +12,6 @@
     color: @text;
 }
 
-
 window#waybar {
     background-color: @base;
     border: 2px solid @secondary;
@@ -73,6 +72,9 @@ tooltip {
     background-color: @primary;
 }
 
+#custom-youtube {
+    font-size: 20px;
+}
 
 #hardware .module {
     background: none;

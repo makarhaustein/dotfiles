@@ -8,6 +8,7 @@
 
     "modules-left": [
         "group/arch",
+        "image#chatgpt",
         "custom/youtube",
     ],
     "modules-center": [
@@ -63,14 +64,16 @@
             "custom/arch-text"
         ]
     },
-
     "custom/youtube": {
-//        "format": "",
-        "format": "",
-        "on-click": "xdg-open https://www.youtube.com/",
-
-        "tooltip": false
-
+        "format": "",
+        "on-click": "firefox -P hidebars https://www.youtube.com/ https://www.youtube.com/",
+        "tooltip": false,
+    },
+    "image#chatgpt": {
+        "path": "/home/makarh/.config/waybar/icons/openai-200x200.png",
+        "size": 22, 
+        "on-click": "firefox -P hidebars https://chatgpt.com/",
+        "tooltip": false,
     },
     "wireplumber": {
         "format": "{volume}% {icon}",
