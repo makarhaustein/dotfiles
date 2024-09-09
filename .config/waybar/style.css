@@ -18,7 +18,7 @@ window#waybar {
     border-radius: 8px;
     color: @text;
     font-family: Symbols Nerd Font, JetBrainsMono NF;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 button {
@@ -26,12 +26,20 @@ button {
 }
 
 .module {
-    margin: 6px 2px;
+    margin: 0 1px;
     padding: 0 10px;
-    background: @primary;
     border-radius: 6px;
-    border: 2px solid @secondary;
+    border: 2px solid transparent;
     transition: background-color 0.2s ease, border 0.2s ease;
+}
+
+label.module:hover {
+    border: 2px solid @accent;
+}
+
+tooltip {
+    background: @primary;
+    border: 2px solid @secondary;
 }
 
 #workspaces {
@@ -54,37 +62,35 @@ button {
 }
 
 
-label.module:hover {
-    border: 2px solid @accent;
-}
-
-tooltip {
-    background: @primary;
-    border: 2px solid @secondary;
-}
-
 #custom-arch-icon {
     margin: 0 2px 0 0;
     padding: 0 10px 0 12px;
+    border: 2px solid @secondary;
     border-radius: 8px 0 0 8px;
     font-size: 25px;
     color: @accent;
     background-color: @primary;
 }
 
-#custom-youtube {
-    font-size: 20px;
+#hardware,
+#tray {
+    margin: 6px 4px;
+    background: @primary;
+    border: 2px solid @secondary;
+    border-radius: 6px;
 }
 
-#hardware .module {
-    background: none;
-    border: none;
-}
+#wireplumber,
+#clock,
+.not-power .module {
+    margin: 6px 2px;
+    background: @primary;
+    border: 2px solid @secondary;
 
-#group-power .module {
-    padding: 0 10px 0 10px;
 }
 
 #custom-power {
-    margin-right: 6px;
+    margin: 6px 6px 6px 2px;
+    background: @primary;
+    border: 2px solid @secondary;
 }
