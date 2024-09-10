@@ -63,7 +63,7 @@
     },
     "image#chatgpt": {
         "path": "/home/makarh/.config/waybar/icons/openai-200x200.png",
-        "size": 18, 
+        "size": 20, 
         "on-click": "firefox -P hidebars https://chatgpt.com/",
         "tooltip": false,
     },

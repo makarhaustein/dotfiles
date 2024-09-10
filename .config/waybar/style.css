@@ -18,7 +18,7 @@ window#waybar {
     border-radius: 8px;
     color: @text;
     font-family: Symbols Nerd Font, JetBrainsMono NF;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 button {
