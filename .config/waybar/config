@@ -7,8 +7,9 @@
     "reload_style_on_change": true,
 
     "modules-left": [
-        "group/arch",
-        "group/tray",
+        "custom/arch",
+        "image#chatgpt",
+        "custom/youtube",
     ],
     "modules-center": [
         "hyprland/workspaces",
@@ -50,26 +51,10 @@
             "temperature",
 		]
 	},
-    "custom/arch-icon": {
+    "custom/arch": {
         "format": "󰣇",
         "on-click": "kitty --hold neofetch",
         "tooltip": false,
-    },
-    "custom/arch-text": {
-        "format": "I use arch btw...",
-        "tooltip": false
-    },
-    "group/arch": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 500,
-            "children-class": "arch-btw",
-            "transition-left-to-right": true,
-        },
-        "modules": [
-            "custom/arch-icon",
-            "custom/arch-text"
-        ]
     },
     "custom/youtube": {
         "format": "",
@@ -78,7 +63,7 @@
     },
     "image#chatgpt": {
         "path": "/home/makarh/.config/waybar/icons/openai-200x200.png",
-        "size": 22, 
+        "size": 18, 
         "on-click": "firefox -P hidebars https://chatgpt.com/",
         "tooltip": false,
     },

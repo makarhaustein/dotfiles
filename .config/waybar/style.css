@@ -1,6 +1,6 @@
 @define-color base rgba(26, 27, 38, 0.6);
-@define-color primary rgba(40, 45, 62, 1);
-@define-color secondary #494D64;
+@define-color primary rgba(34, 38, 52, 1);
+@define-color secondary #343747;
 @define-color text white;
 @define-color accent rgb(125, 207, 255);
 
@@ -33,8 +33,14 @@ button {
     transition: background-color 0.2s ease, border 0.2s ease;
 }
 
-label.module:hover {
-    border: 2px solid @accent;
+.chatgpt:hover,
+#custom-youtube:hover,
+#custom-arch:hover,
+#tray .module:hover,
+#wireplumber:hover,
+#clock:hover,
+#group-power .module:hover {
+    background-color: transparent;
 }
 
 tooltip {
@@ -48,21 +54,20 @@ tooltip {
 
 #workspaces button {
     color: @text;
+    transition: color 0.2s ease;
 }
 
 #workspaces button.active {
     color: @accent;
 }
 
-
 #workspaces button:hover {
-    background: @primary;
+    background: inherit;
     box-shadow: inherit;
     text-shadow: inherit;
 }
 
-
-#custom-arch-icon {
+#custom-arch {
     margin: 0 2px 0 0;
     padding: 0 10px 0 12px;
     border: 2px solid @secondary;
@@ -72,25 +77,26 @@ tooltip {
     background-color: @primary;
 }
 
-#hardware,
 #tray {
-    margin: 6px 4px;
+    margin: 5px 4px;
     background: @primary;
     border: 2px solid @secondary;
     border-radius: 6px;
 }
 
+.chatgpt,
+#custom-youtube,
 #wireplumber,
 #clock,
 .not-power .module {
-    margin: 6px 2px;
+    margin: 5px 2px;
     background: @primary;
     border: 2px solid @secondary;
 
 }
 
 #custom-power {
-    margin: 6px 6px 6px 2px;
+    margin: 5px 5px 5px 2px;
     background: @primary;
     border: 2px solid @secondary;
 }
