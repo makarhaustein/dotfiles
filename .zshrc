@@ -25,6 +25,7 @@ compinit
 # End of lines added by compinstall
 # --- autocompl ---
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-accept
 
 # --- Neovim
 export EDITOR=nvim
