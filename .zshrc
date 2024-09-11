@@ -12,6 +12,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
+# Fixes vim like motion not deleting non-inserted chars
+bindkey "^H" backward-delete-char
+bindkey "^?" backward-delete-char
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/makarh/.zshrc'
