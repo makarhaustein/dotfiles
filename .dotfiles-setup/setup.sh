@@ -102,10 +102,18 @@ echo "=== Packages to be installed from other sources ==="
 skip_section=false
 install_all=false
 
-if [ ! -d "$HOME/.zsh/scripts/fzf-git/" ] && query_wants_package "fzf-git extension (https://github.com/junegunn/fzf-git.sh.git)"; then git clone "https://github.com/junegunn/fzf-git.sh.git" "$HOME/.zsh/scripts/fzf-git/"
+if [ ! -d "$HOME/.zsh/scripts/fzf-git/" ] && query_wants_package "fzf-git extension (https://github.com/junegunn/fzf-git.sh.git)"; then 
+    git clone "https://github.com/junegunn/fzf-git.sh.git" "$HOME/.zsh/scripts/fzf-git/"
 else
     echo "fzf-git extension (https://github.com/junegunn/fzf-git.sh.git) package is already installed."
 fi
+
+if [ ! -d "$HOME/.zsh/zsh-autosuggestions/" ] && query_wants_package "zsh autosuggestions (https://github.com/zsh-users/zsh-autosuggestions)"; then 
+    git clone "https://github.com/zsh-users/zsh-autosuggestions" "$HOME/.zsh/zsh-autosuggestions"
+else
+    echo "fzf-git extension (https://github.com/junegunn/fzf-git.sh.git) package is already installed."
+fi
+
 
 echo -e "Done.\n"
 
