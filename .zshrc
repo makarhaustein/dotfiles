@@ -87,5 +87,8 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # -- rofi theme ---
 export PATH=$HOME/.config/rofi/scripts:$PATH
 
-# firefox 
+# ---- firefox ----
 MOZ_ENABLE_WAYLAND=1
+
+# ---- spotify ----
+export PATH=$PATH:/home/makarh/.spicetify
