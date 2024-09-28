@@ -39,7 +39,7 @@ alias rmorphans='pacman -Qtdq | sudo pacman -Rns -'
 eval $(thefuck --alias)
 
 # ------ eza ------
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias eza="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 # ------ fzf ------
 eval "$(fzf --zsh)"
@@ -77,7 +77,6 @@ source "$HOME/.zsh/scripts/fzf-git/fzf-git.sh"
 
 # ---- zoxide -----
 eval "$(zoxide init zsh)"
-alias cd="z"
 
 # - powerlevel10k -
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
@@ -92,3 +91,4 @@ MOZ_ENABLE_WAYLAND=1
 
 # ---- spotify ----
 export PATH=$PATH:/home/makarh/.spicetify
+
