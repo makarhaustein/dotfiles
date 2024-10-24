@@ -25,9 +25,10 @@ packages=(
     "waybar" # topbar
     "hyprpaper" # wallpaper
     "cliphist"
-    "dmenu"
     "mpd"
-    "testdisk"
+    "rofi"
+    "thefuck"
+    "fzf"
 )
 
 ######### Pacman package installation
