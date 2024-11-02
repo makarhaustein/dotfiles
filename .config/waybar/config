@@ -10,6 +10,7 @@
         "custom/arch",
         "image#chatgpt",
         "custom/youtube",
+        "custom/discord"
     ],
     "modules-center": [
         "hyprland/workspaces",
@@ -58,7 +59,12 @@
     },
     "custom/youtube": {
         "format": "",
-        "on-click": "firefox -P hidebars https://www.youtube.com/ https://www.youtube.com/",
+        "on-click": "firefox -P hidebars https://www.youtube.com/",
+        "tooltip": false,
+    },
+    "custom/discord": {
+        "format": "",
+        "on-click": "firefox -P hidebars https://discord.com/app",
         "tooltip": false,
     },
     "image#chatgpt": {

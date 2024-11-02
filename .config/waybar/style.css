@@ -36,6 +36,7 @@ button {
 .chatgpt:hover,
 #custom-youtube:hover,
 #custom-arch:hover,
+#custom-discord:hover,
 #tray .module:hover,
 #wireplumber:hover,
 #clock:hover,
@@ -86,10 +87,12 @@ tooltip {
 
 .chatgpt,
 #custom-youtube,
+#custom-discord,
 #wireplumber,
 #clock,
 .not-power .module {
     margin: 5px 2px;
+    padding: 0px 12px;
     background: @primary;
     border: 2px solid @secondary;
 
