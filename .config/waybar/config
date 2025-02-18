@@ -4,7 +4,7 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     "spacing": 0, // Gaps between modules
     "margin": "4 4 0 4", 
-    "reload_style_on_change": true,
+    "reload_style_on_change": false,
 
     "modules-left": [
         "custom/arch",
@@ -17,6 +17,7 @@
     ],
     "modules-right": [
         "group/hardware",
+        "custom/eject",
         "wireplumber",
         "clock",
         "group/group-power",
@@ -25,6 +26,9 @@
         "format": "{id}: {windows}",
         "window-rewrite-default": "󰻃",
         "format-window-separator": "|",
+        "persistent-workspaces": {
+             "*": 3, // 5 workspaces by default on every monitor
+        },
         "window-rewrite": {
             "class<firefox>": "󰈹",
             "class<firefox> title<.*github.*>": "",
@@ -150,5 +154,10 @@
         "format": "",
         "tooltip": false,
         "on-click": "shutdown now"
+    },
+    "custom/eject": {
+        "format": "",
+        "tooltip": false, 
+        "on-click": "udiskie-umount -a"
     }
 }
