@@ -26,9 +26,6 @@
         "format": "{id}: {windows}",
         "window-rewrite-default": "󰻃",
         "format-window-separator": "|",
-        "persistent-workspaces": {
-             "*": 3, // 5 workspaces by default on every monitor
-        },
         "window-rewrite": {
             "class<firefox>": "󰈹",
             "class<firefox> title<.*github.*>": "",
